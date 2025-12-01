@@ -63,10 +63,16 @@ class EmployeeBoardingSerializer(serializers.ModelSerializer):
         source='employee',
         write_only=True
     )
+    bus = BusSerializer(read_only=True)
+    bus_id = serializers.PrimaryKeyRelatedField(
+        queryset=Bus.objects.all(),
+        source='bus',
+        write_only=True
+    )
 
     class Meta:
         model = EmployeeBoarding
-        fields = ['id', 'trip', 'employee', 'employee_id', 'boarded_at']
+        fields = ['id', 'trip', 'bus', 'bus_id', 'employee', 'employee_id', 'boarded_at', 'latitude', 'longitude']
         read_only_fields = ['id', 'boarded_at']
 
 
@@ -251,6 +257,7 @@ class LiveTrackingSerializer(serializers.ModelSerializer):
     driver = DriverSerializer(read_only=True)
     route = RouteSerializer(read_only=True)
     current_location = serializers.SerializerMethodField()
+    locations = serializers.SerializerMethodField()
     recent_boardings = serializers.SerializerMethodField()
     boarding_count = serializers.SerializerMethodField()
 
@@ -258,22 +265,72 @@ class LiveTrackingSerializer(serializers.ModelSerializer):
         model = Trip
         fields = [
             'id', 'bus', 'driver', 'route', 'start_time',
-            'is_active', 'current_location', 'recent_boardings', 'boarding_count'
+            'is_active', 'current_location', 'locations', 'recent_boardings', 'boarding_count'
         ]
 
     def get_current_location(self, obj):
-        """Get current GPS location"""
+        """Get current GPS location with speed and heading"""
         location = BusLocation.objects.filter(
             bus=obj.bus,
             timestamp__gte=obj.start_time
         ).order_by('-timestamp').first()
         if location:
+            # Calculate heading from last two points
+            heading = 0
+            speed = 0
+            prev_location = BusLocation.objects.filter(
+                bus=obj.bus,
+                timestamp__gte=obj.start_time,
+                timestamp__lt=location.timestamp
+            ).order_by('-timestamp').first()
+
+            if prev_location:
+                import math
+                # Calculate heading (bearing) between two points
+                lat1 = math.radians(prev_location.latitude)
+                lat2 = math.radians(location.latitude)
+                diff_lng = math.radians(location.longitude - prev_location.longitude)
+
+                x = math.sin(diff_lng) * math.cos(lat2)
+                y = math.cos(lat1) * math.sin(lat2) - math.sin(lat1) * math.cos(lat2) * math.cos(diff_lng)
+                heading = math.degrees(math.atan2(x, y))
+                heading = (heading + 360) % 360
+
+                # Calculate speed (km/h)
+                time_diff = (location.timestamp - prev_location.timestamp).total_seconds()
+                if time_diff > 0:
+                    # Haversine distance
+                    R = 6371  # Earth's radius in km
+                    dlat = lat2 - lat1
+                    dlng = diff_lng
+                    a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlng/2)**2
+                    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+                    distance = R * c
+                    speed = (distance / time_diff) * 3600  # km/h
+
             return {
                 'latitude': location.latitude,
                 'longitude': location.longitude,
-                'timestamp': location.timestamp
+                'timestamp': location.timestamp,
+                'speed': round(speed, 1),
+                'heading': round(heading, 1)
             }
         return None
+
+    def get_locations(self, obj):
+        """Get all location points for the trip"""
+        locations = BusLocation.objects.filter(
+            bus=obj.bus,
+            timestamp__gte=obj.start_time
+        ).order_by('timestamp')
+        return [
+            {
+                'latitude': loc.latitude,
+                'longitude': loc.longitude,
+                'timestamp': loc.timestamp
+            }
+            for loc in locations
+        ]
 
     def get_recent_boardings(self, obj):
         """Last 10 employee boardings"""
@@ -289,9 +346,12 @@ class LiveTrackingSerializer(serializers.ModelSerializer):
 # =============================================================================
 
 class NFCCheckInSerializer(serializers.Serializer):
-    """NFC check-in request serializer"""
+    """NFC check-in request serializer - captures tablet GPS location"""
     nfc_uid = serializers.CharField(max_length=100)
     trip_id = serializers.IntegerField()
+    # Tablet GPS location (required for attendance tracking)
+    latitude = serializers.FloatField(min_value=-90, max_value=90, required=False, allow_null=True)
+    longitude = serializers.FloatField(min_value=-180, max_value=180, required=False, allow_null=True)
 
     def validate_nfc_uid(self, value):
         """Validate NFC UID exists"""
@@ -324,10 +384,13 @@ class NFCCheckInSerializer(serializers.Serializer):
         return data
 
     def create(self, validated_data):
-        """Create employee boarding record"""
+        """Create employee boarding record with tablet location"""
         boarding = EmployeeBoarding.objects.create(
             trip=self.trip,
-            employee=self.employee
+            bus=self.trip.bus,
+            employee=self.employee,
+            latitude=validated_data.get('latitude'),
+            longitude=validated_data.get('longitude')
         )
         return boarding
 

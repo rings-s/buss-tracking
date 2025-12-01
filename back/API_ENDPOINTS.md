@@ -10,12 +10,16 @@ Base URL: `http://localhost:8000`
 |--------|----------|-------------|
 | POST | `/api/auth/login/` | Login with email/password, returns JWT |
 | POST | `/api/auth/logout/` | Logout (invalidate token) |
-| POST | `/api/auth/password/reset/` | Request password reset |
-| POST | `/api/auth/password/change/` | Change password |
-| GET | `/api/auth/user/` | Get current authenticated user |
-| PUT | `/api/auth/user/` | Update current user |
-| POST | `/api/auth/registration/` | Register new user |
+| POST | `/api/auth/register/` | Self-register (employee role only) |
+| POST | `/api/auth/admin/register/` | Admin register user with any role |
 | POST | `/api/auth/token/refresh/` | Refresh JWT token |
+| GET | `/api/auth/verify/` | Verify token validity |
+| GET | `/api/auth/user/` | Get current authenticated user |
+| PUT/PATCH | `/api/auth/user/` | Update current user profile |
+| POST | `/api/auth/password/change/` | Change password |
+| POST | `/api/auth/google/` | Google OAuth login |
+| GET | `/api/auth/users/` | Get users by role (?role=driver) |
+| POST | `/api/auth/assign-nfc/` | Assign NFC UID to user |
 
 ---
 
@@ -209,7 +213,7 @@ Base URL: `http://localhost:8000`
 
 ## Authentication Notes
 
-All endpoints (except `/api/auth/login/` and `/api/auth/registration/`) require authentication.
+All endpoints (except `/api/auth/login/` and `/api/auth/register/`) require authentication.
 
 **Headers:**
 ```

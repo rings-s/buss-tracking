@@ -16,6 +16,8 @@ from .serializers import (
     UserSerializer,
     UserRegistrationSerializer,
     UserProfileSerializer,
+    EmployeeProfileSerializer,
+    NonEmployeeProfileSerializer,
     ChangePasswordSerializer
 )
 
@@ -291,17 +293,28 @@ class GoogleLoginView(APIView):
 
 class UserProfileAPIView(APIView):
     """
-    Get/Update current user profile
+    Get/Update current user profile with role-based NFC card access
     GET/PUT/PATCH /api/auth/user/
+
+    - Employees can update their NFC card
+    - Admins and Drivers cannot update their NFC card (readonly)
     """
     permission_classes = [permissions.IsAuthenticated]
 
+    def get_serializer_class(self):
+        """Return appropriate serializer based on user role"""
+        if self.request.user.role == 'employee':
+            return EmployeeProfileSerializer
+        return NonEmployeeProfileSerializer
+
     def get(self, request):
-        serializer = UserProfileSerializer(request.user)
+        serializer_class = self.get_serializer_class()
+        serializer = serializer_class(request.user)
         return Response(serializer.data)
 
     def put(self, request):
-        serializer = UserProfileSerializer(
+        serializer_class = self.get_serializer_class()
+        serializer = serializer_class(
             request.user,
             data=request.data,
             partial=False
@@ -315,7 +328,8 @@ class UserProfileAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def patch(self, request):
-        serializer = UserProfileSerializer(
+        serializer_class = self.get_serializer_class()
+        serializer = serializer_class(
             request.user,
             data=request.data,
             partial=True

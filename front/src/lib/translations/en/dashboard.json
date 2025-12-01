@@ -1,0 +1,26 @@
+{
+	"greeting": {
+		"morning": "Good Morning",
+		"afternoon": "Good Afternoon",
+		"evening": "Good Evening"
+	},
+	"status": {
+		"systemOnline": "System Online",
+		"adminPortal": "Admin Portal",
+		"driverPortal": "Driver Portal",
+		"employeePortal": "Employee Portal"
+	},
+	"pending": {
+		"title": "Account Pending Verification",
+		"message": "Welcome to the system. Your account role has not been assigned yet. Please contact an administrator to verify your account and grant access.",
+		"contactSupport": "Contact Support"
+	},
+	"stats": {
+		"total": "Total",
+		"active": "Active",
+		"completed": "Completed",
+		"today": "Today",
+		"thisWeek": "This Week",
+		"thisMonth": "This Month"
+	}
+}

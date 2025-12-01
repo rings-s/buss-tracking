@@ -1,0 +1,69 @@
+{
+	"title": "NFC Check-in",
+	"subtitle": "Employee attendance via NFC card scan",
+	"gps": {
+		"active": "GPS Active",
+		"acquiring": "Acquiring GPS...",
+		"error": "GPS Error",
+		"ready": "Ready",
+		"latitude": "Latitude:",
+		"longitude": "Longitude:",
+		"locationRecorded": "Location will be recorded with check-in",
+		"pleaseWait": "Please wait while we acquire your GPS location...",
+		"notSupported": "Geolocation not supported on this device",
+		"permissionDenied": "Location permission denied. Please enable GPS in your browser settings.",
+		"unavailable": "Location unavailable. Make sure GPS is enabled on your device.",
+		"timeout": "GPS is taking longer than expected. Still trying... (can take up to 60 seconds)",
+		"unableToGet": "Unable to get location."
+	},
+	"trip": {
+		"selectTrip": "Select Trip",
+		"selectActiveTripPlaceholder": "-- Select active trip --",
+		"tripLabel": "Trip #{{id}} - {{busName}} ({{driverName}})",
+		"tripId": "Trip ID",
+		"enterTripId": "Enter trip ID...",
+		"driverWillProvide": "The driver will provide you with the trip ID"
+	},
+	"noActiveTrips": {
+		"title": "Check-in Available",
+		"messageAuth": "No active trips found. Enter trip ID manually or ask the driver to start a trip.",
+		"messageGuest": "Ask the driver for the trip ID to check in."
+	},
+	"nfc": {
+		"cardUid": "NFC Card UID",
+		"cardUidManual": "NFC Card UID (Manual)",
+		"scanCard": "Scan NFC card...",
+		"readerWillInput": "NFC reader will automatically input the card UID",
+		"readerOrWebNFC": "NFC reader or Web NFC will input the card UID",
+		"webNfcScanner": "Web NFC Scanner",
+		"scanning": "Scanning...",
+		"inactive": "Inactive",
+		"enableScanning": "Enable NFC Scanning",
+		"stopScanning": "Stop NFC Scanning",
+		"readyToScan": "Ready to scan - tap NFC card on device",
+		"notSupported": "Web NFC is not supported on this device. Please use manual input below.",
+		"selectTripFirst": "Please select a trip first.",
+		"orManualInput": "OR use manual input"
+	},
+	"form": {
+		"processing": "Processing...",
+		"checkInEmployee": "Check In Employee",
+		"validationError": "Please select a trip and scan NFC card"
+	},
+	"success": {
+		"title": "Check-in Successful!",
+		"employee": "Employee",
+		"email": "Email",
+		"time": "Time",
+		"location": "Location",
+		"autoResetting": "Auto-resetting in 3 seconds...",
+		"scanNext": "Scan Next Card"
+	},
+	"info": {
+		"title": "How NFC Check-in Works",
+		"step1": "Employee taps their NFC card on the tablet",
+		"step2": "System automatically records employee, time & location",
+		"step3": "No employee login required after initial registration",
+		"step4": "Card is linked directly to employee profile"
+	}
+}

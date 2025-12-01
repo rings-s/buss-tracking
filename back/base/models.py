@@ -51,9 +51,13 @@ class BusAttendance(models.Model):
 
 
 class EmployeeBoarding(models.Model):
+    bus = models.ForeignKey(Bus, on_delete=models.CASCADE)
     trip = models.ForeignKey(Trip, on_delete=models.CASCADE)
     employee = models.ForeignKey(User, on_delete=models.CASCADE, limit_choices_to={'role':'employee'})
     boarded_at = models.DateTimeField(auto_now_add=True)
+    # Location from tablet GPS at check-in time
+    latitude = models.FloatField(null=True, blank=True)
+    longitude = models.FloatField(null=True, blank=True)
 
     class Meta:
         unique_together = ('trip', 'employee')  # Prevent double scanning

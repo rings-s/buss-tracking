@@ -1,0 +1,63 @@
+{
+	"title": "Trips",
+	"subtitle": "Manage and monitor all bus trips",
+	"stats": {
+		"totalTrips": "Total Trips",
+		"active": "Active",
+		"completed": "Completed",
+		"boardings": "Boardings"
+	},
+	"map": {
+		"title": "Active Trips Map",
+		"updated": "Updated",
+		"noGpsData": "Active trips are running, but GPS data is not yet available.",
+		"noGpsNote": "GPS data will appear once drivers start sending location updates."
+	},
+	"filters": {
+		"search": "Search by bus, driver, or route...",
+		"all": "All",
+		"active": "Active",
+		"completed": "Completed",
+		"clearFilters": "Clear filters"
+	},
+	"card": {
+		"trip": "Trip",
+		"status": "Status",
+		"boardings": "Boardings",
+		"duration": "Duration"
+	},
+	"details": {
+		"title": "Trip Information",
+		"status": "Status",
+		"startTime": "Start Time",
+		"endTime": "End Time",
+		"duration": "Duration",
+		"boardings": "Boardings",
+		"bus": "Bus",
+		"busName": "Name",
+		"busPlate": "Plate",
+		"busCapacity": "Capacity",
+		"driver": "Driver",
+		"driverName": "Name",
+		"driverEmail": "Email",
+		"driverPhone": "Phone",
+		"route": "Route",
+		"routeName": "Name",
+		"routeFrom": "From",
+		"routeTo": "To",
+		"viewFullDetails": "View Full Details",
+		"close": "Close"
+	},
+	"empty": {
+		"title": "No trips found",
+		"message": "There are no trips available"
+	},
+	"loading": "Loading trips...",
+	"auth": {
+		"title": "Sign in Required",
+		"message": "Please sign in to view trip information.",
+		"signIn": "Sign In"
+	},
+	"error": "Error",
+	"tryAgain": "Try Again"
+}

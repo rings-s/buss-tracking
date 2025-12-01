@@ -1,0 +1,52 @@
+{
+	"title": "Live Tracking",
+	"subtitle": "Real-time GPS tracking of active trips",
+	"map": {
+		"activeTripsMap": "Active Trips Map",
+		"loading": "Loading map...",
+		"noActiveTrips": "No active trips with GPS data",
+		"noGpsData": "Waiting for GPS updates...",
+		"clickMarker": "Click on a marker to view trip details",
+		"zoom": "Zoom",
+		"center": "Center Map",
+		"fullscreen": "Fullscreen"
+	},
+	"legend": {
+		"title": "Legend",
+		"currentLocation": "Current Location",
+		"startPoint": "Start Point",
+		"endPoint": "End Point",
+		"route": "Route Path"
+	},
+	"tripInfo": {
+		"bus": "Bus",
+		"driver": "Driver",
+		"route": "Route",
+		"speed": "Speed",
+		"location": "Location",
+		"lastUpdate": "Last Update",
+		"boardings": "Boardings",
+		"startTime": "Start Time",
+		"duration": "Duration"
+	},
+	"filters": {
+		"showAll": "Show All",
+		"showActive": "Active Only",
+		"byBus": "Filter by Bus",
+		"byDriver": "Filter by Driver",
+		"byRoute": "Filter by Route"
+	},
+	"refresh": {
+		"autoRefresh": "Auto-refresh",
+		"refreshNow": "Refresh Now",
+		"lastRefresh": "Last refresh",
+		"refreshInterval": "Refresh every {{seconds}} seconds"
+	},
+	"popup": {
+		"tripStart": "Trip Start",
+		"latestGPS": "Latest GPS"
+	},
+	"units": {
+		"kmh": "km/h"
+	}
+}

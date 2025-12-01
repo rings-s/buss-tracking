@@ -1,0 +1,17 @@
+{
+	"title": "Driver Management",
+	"myTrips": "My Trips",
+	"startTrip": "Start Trip",
+	"activeTrip": "Active Trip",
+	"endTrip": "End Trip",
+	"selectBus": "Select Bus",
+	"selectRoute": "Select Route",
+	"startNow": "Start Now",
+	"tripInProgress": "Trip in Progress",
+	"currentLocation": "Current Location",
+	"speedKmh": "km/h",
+	"boardingCount": "Boarding Count",
+	"tripDuration": "Trip Duration",
+	"noActiveBus": "No active bus assigned",
+	"noActiveRoute": "No route assigned"
+}

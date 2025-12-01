@@ -1,0 +1,79 @@
+{
+	"buttons": {
+		"save": "Save",
+		"cancel": "Cancel",
+		"delete": "Delete",
+		"edit": "Edit",
+		"add": "Add",
+		"create": "Create",
+		"update": "Update",
+		"submit": "Submit",
+		"close": "Close",
+		"confirm": "Confirm",
+		"back": "Back",
+		"next": "Next",
+		"previous": "Previous",
+		"search": "Search",
+		"filter": "Filter",
+		"export": "Export",
+		"import": "Import",
+		"download": "Download",
+		"upload": "Upload",
+		"refresh": "Refresh",
+		"viewDetails": "View Details",
+		"learnMore": "Learn More"
+	},
+	"actions": {
+		"loading": "Loading...",
+		"saving": "Saving...",
+		"deleting": "Deleting...",
+		"submitting": "Submitting...",
+		"processing": "Processing...",
+		"uploading": "Uploading...",
+		"downloading": "Downloading..."
+	},
+	"states": {
+		"active": "Active",
+		"inactive": "Inactive",
+		"pending": "Pending",
+		"completed": "Completed",
+		"cancelled": "Cancelled",
+		"approved": "Approved",
+		"rejected": "Rejected",
+		"draft": "Draft",
+		"published": "Published"
+	},
+	"time": {
+		"today": "Today",
+		"yesterday": "Yesterday",
+		"tomorrow": "Tomorrow",
+		"thisWeek": "This Week",
+		"lastWeek": "Last Week",
+		"thisMonth": "This Month",
+		"lastMonth": "Last Month",
+		"thisYear": "This Year",
+		"custom": "Custom"
+	},
+	"pagination": {
+		"showing": "Showing",
+		"of": "of",
+		"results": "results",
+		"page": "Page",
+		"perPage": "Per page",
+		"first": "First",
+		"last": "Last"
+	},
+	"empty": {
+		"noResults": "No results found",
+		"noData": "No data available",
+		"emptyList": "The list is empty",
+		"tryDifferentFilters": "Try adjusting your filters"
+	},
+	"confirmations": {
+		"areYouSure": "Are you sure?",
+		"cantBeUndone": "This action cannot be undone",
+		"deleteConfirm": "Are you sure you want to delete this?",
+		"cancelConfirm": "Are you sure you want to cancel?",
+		"discardChanges": "Discard changes?"
+	}
+}

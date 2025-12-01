@@ -10,7 +10,7 @@
 - start trip
 
 # employee 
-- enter the bus
+- enter inside the bus
 - touch the nfc and read his card
 - django send the nfc uid 
 - django record the time

@@ -1,0 +1,79 @@
+{
+	"buttons": {
+		"save": "حفظ",
+		"cancel": "إلغاء",
+		"delete": "حذف",
+		"edit": "تعديل",
+		"add": "إضافة",
+		"create": "إنشاء",
+		"update": "تحديث",
+		"submit": "إرسال",
+		"close": "إغلاق",
+		"confirm": "تأكيد",
+		"back": "رجوع",
+		"next": "التالي",
+		"previous": "السابق",
+		"search": "بحث",
+		"filter": "تصفية",
+		"export": "تصدير",
+		"import": "استيراد",
+		"download": "تحميل",
+		"upload": "رفع",
+		"refresh": "تحديث",
+		"viewDetails": "عرض التفاصيل",
+		"learnMore": "اعرف المزيد"
+	},
+	"actions": {
+		"loading": "جاري التحميل...",
+		"saving": "جاري الحفظ...",
+		"deleting": "جاري الحذف...",
+		"submitting": "جاري الإرسال...",
+		"processing": "جاري المعالجة...",
+		"uploading": "جاري الرفع...",
+		"downloading": "جاري التحميل..."
+	},
+	"states": {
+		"active": "نشط",
+		"inactive": "غير نشط",
+		"pending": "قيد الانتظار",
+		"completed": "مكتمل",
+		"cancelled": "ملغى",
+		"approved": "موافق عليه",
+		"rejected": "مرفوض",
+		"draft": "مسودة",
+		"published": "منشور"
+	},
+	"time": {
+		"today": "اليوم",
+		"yesterday": "أمس",
+		"tomorrow": "غداً",
+		"thisWeek": "هذا الأسبوع",
+		"lastWeek": "الأسبوع الماضي",
+		"thisMonth": "هذا الشهر",
+		"lastMonth": "الشهر الماضي",
+		"thisYear": "هذا العام",
+		"custom": "مخصص"
+	},
+	"pagination": {
+		"showing": "عرض",
+		"of": "من",
+		"results": "نتيجة",
+		"page": "صفحة",
+		"perPage": "لكل صفحة",
+		"first": "الأولى",
+		"last": "الأخيرة"
+	},
+	"empty": {
+		"noResults": "لم يتم العثور على نتائج",
+		"noData": "لا توجد بيانات متاحة",
+		"emptyList": "القائمة فارغة",
+		"tryDifferentFilters": "جرب تعديل الفلاتر"
+	},
+	"confirmations": {
+		"areYouSure": "هل أنت متأكد؟",
+		"cantBeUndone": "لا يمكن التراجع عن هذا الإجراء",
+		"deleteConfirm": "هل أنت متأكد من الحذف؟",
+		"cancelConfirm": "هل أنت متأكد من الإلغاء؟",
+		"discardChanges": "تجاهل التغييرات؟"
+	}
+}

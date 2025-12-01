@@ -1,0 +1,23 @@
+{
+	"copyright": "© {{year}} Bus Tracker. All rights reserved.",
+	"links": {
+		"about": "About",
+		"contact": "Contact",
+		"privacy": "Privacy Policy",
+		"terms": "Terms of Service",
+		"help": "Help Center",
+		"documentation": "Documentation"
+	},
+	"social": {
+		"followUs": "Follow Us",
+		"facebook": "Facebook",
+		"twitter": "Twitter",
+		"linkedin": "LinkedIn",
+		"instagram": "Instagram"
+	},
+	"contact": {
+		"email": "Email",
+		"phone": "Phone",
+		"address": "Address"
+	}
+}

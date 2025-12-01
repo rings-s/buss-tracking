@@ -1,0 +1,16 @@
+{
+	"hero": {
+		"title1": "Precision",
+		"title2": "In Motion.",
+		"description": "The next generation of fleet telemetry. Real-time global tracking, NFC-based attendance, and predictive AI analytics in one cohesive operating system.",
+		"openCommandCenter": "Open Command Center",
+		"authenticate": "Authenticate",
+		"systemStatus": "System Status"
+	},
+	"features": {
+		"title": "Features",
+		"realTimeTracking": "Real-Time Tracking",
+		"nfcAttendance": "NFC Attendance",
+		"analytics": "Predictive Analytics"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"title": "إدارة السائقين",
+	"myTrips": "رحلاتي",
+	"startTrip": "بدء رحلة",
+	"activeTrip": "رحلة نشطة",
+	"endTrip": "إنهاء الرحلة",
+	"selectBus": "اختر حافلة",
+	"selectRoute": "اختر مسار",
+	"startNow": "ابدأ الآن",
+	"tripInProgress": "رحلة قيد التنفيذ",
+	"currentLocation": "الموقع الحالي",
+	"speedKmh": "كم/ساعة",
+	"boardingCount": "عدد السجلات",
+	"tripDuration": "مدة الرحلة",
+	"noActiveBus": "لا توجد حافلة نشطة معينة",
+	"noActiveRoute": "لا يوجد مسار معين"
+}

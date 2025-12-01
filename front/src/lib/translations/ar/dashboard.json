@@ -1,0 +1,26 @@
+{
+	"greeting": {
+		"morning": "صباح الخير",
+		"afternoon": "مساء الخير",
+		"evening": "مساء الخير"
+	},
+	"status": {
+		"systemOnline": "النظام متصل",
+		"adminPortal": "بوابة المدير",
+		"driverPortal": "بوابة السائق",
+		"employeePortal": "بوابة الموظف"
+	},
+	"pending": {
+		"title": "الحساب قيد المراجعة",
+		"message": "مرحباً بك في النظام. لم يتم تعيين دور لحسابك بعد. يرجى الاتصال بالمسؤول للتحقق من حسابك ومنح الصلاحيات.",
+		"contactSupport": "اتصل بالدعم"
+	},
+	"stats": {
+		"total": "المجموع",
+		"active": "نشط",
+		"completed": "مكتمل",
+		"today": "اليوم",
+		"thisWeek": "هذا الأسبوع",
+		"thisMonth": "هذا الشهر"
+	}
+}

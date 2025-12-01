@@ -461,9 +461,12 @@ class ScanNFCView(APIView):
     permission_classes = [IsAdminOrDriver]  # Only driver and admin
 
     def post(self, request):
-        # Data from SvelteKit
+        # Data from SvelteKit tablet
         nfc_uid = request.data.get('nfc_uid')
         trip_id = request.data.get('trip_id')
+        # Tablet GPS location
+        latitude = request.data.get('latitude')
+        longitude = request.data.get('longitude')
 
         # 1. Identify Employee
         employee = get_object_or_404(User, nfc_uid=nfc_uid, role='employee')
@@ -471,15 +474,22 @@ class ScanNFCView(APIView):
         # 2. Identify Active Trip
         trip = get_object_or_404(Trip, id=trip_id, is_active=True)
 
-        # 3. Record Attendance (prevent duplicates)
+        # 3. Record Attendance with location (prevent duplicates)
         boarding, created = EmployeeBoarding.objects.get_or_create(
             trip=trip,
-            employee=employee
+            employee=employee,
+            defaults={
+                'latitude': latitude,
+                'longitude': longitude
+            }
         )
 
         if created:
             return Response(
-                {"message": f"Checked in {employee.full_name}"},
+                {
+                    "message": f"Checked in {employee.full_name}",
+                    "location": {"latitude": latitude, "longitude": longitude}
+                },
                 status=status.HTTP_201_CREATED
             )
         else:

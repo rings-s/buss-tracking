@@ -1,0 +1,32 @@
+{
+	"title": "Absence Reports",
+	"subtitle": "View and manage employee absence reports",
+	"submitReport": "Submit Absence Report",
+	"form": {
+		"employee": "Employee",
+		"date": "Date",
+		"reason": "Reason",
+		"description": "Description",
+		"submit": "Submit",
+		"placeholder": {
+			"reason": "e.g. Sick leave, Personal emergency...",
+			"description": "Optional: Provide additional details..."
+		}
+	},
+	"table": {
+		"id": "ID",
+		"employee": "Employee",
+		"date": "Date",
+		"reason": "Reason",
+		"status": "Status",
+		"actions": "Actions"
+	},
+	"status": {
+		"pending": "Pending",
+		"approved": "Approved",
+		"rejected": "Rejected"
+	},
+	"approve": "Approve",
+	"reject": "Reject",
+	"view": "View"
+}

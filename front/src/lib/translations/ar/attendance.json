@@ -1,0 +1,34 @@
+{
+	"title": "سجلات الحضور",
+	"myAttendance": "حضوري",
+	"daily": "الحضور اليومي",
+	"monthly": "الحضور الشهري",
+	"filters": {
+		"date": "التاريخ",
+		"employee": "الموظف",
+		"trip": "الرحلة",
+		"status": "الحالة"
+	},
+	"table": {
+		"id": "الرقم",
+		"employee": "الموظف",
+		"trip": "الرحلة",
+		"bus": "الحافلة",
+		"checkInTime": "وقت تسجيل الدخول",
+		"checkInLocation": "موقع تسجيل الدخول",
+		"status": "الحالة"
+	},
+	"status": {
+		"present": "حاضر",
+		"absent": "غائب",
+		"late": "متأخر"
+	},
+	"export": "تصدير",
+	"downloadReport": "تحميل التقرير",
+	"summary": {
+		"totalDays": "إجمالي الأيام",
+		"present": "حاضر",
+		"absent": "غائب",
+		"attendanceRate": "معدل الحضور"
+	}
+}

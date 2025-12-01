@@ -1,3 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+  import Hero from '$lib/components/hero/Hero.svelte';
+</script>
 
+<main class="antialiased text-gray-900 bg-gray-50 selection:bg-brand-300/50">
+  <Hero />
+</main>

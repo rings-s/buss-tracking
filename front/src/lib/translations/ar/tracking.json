@@ -1,0 +1,52 @@
+{
+	"title": "التتبع المباشر",
+	"subtitle": "تتبع GPS في الوقت الفعلي للرحلات النشطة",
+	"map": {
+		"activeTripsMap": "خريطة الرحلات النشطة",
+		"loading": "جاري تحميل الخريطة...",
+		"noActiveTrips": "لا توجد رحلات نشطة مع بيانات GPS",
+		"noGpsData": "في انتظار تحديثات GPS...",
+		"clickMarker": "انقر على العلامة لعرض تفاصيل الرحلة",
+		"zoom": "تكبير",
+		"center": "توسيط الخريطة",
+		"fullscreen": "ملء الشاشة"
+	},
+	"legend": {
+		"title": "وسيلة الإيضاح",
+		"currentLocation": "الموقع الحالي",
+		"startPoint": "نقطة البداية",
+		"endPoint": "نقطة النهاية",
+		"route": "مسار الطريق"
+	},
+	"tripInfo": {
+		"bus": "الحافلة",
+		"driver": "السائق",
+		"route": "المسار",
+		"speed": "السرعة",
+		"location": "الموقع",
+		"lastUpdate": "آخر تحديث",
+		"boardings": "السجلات",
+		"startTime": "وقت البدء",
+		"duration": "المدة"
+	},
+	"filters": {
+		"showAll": "عرض الكل",
+		"showActive": "النشطة فقط",
+		"byBus": "تصفية حسب الحافلة",
+		"byDriver": "تصفية حسب السائق",
+		"byRoute": "تصفية حسب المسار"
+	},
+	"refresh": {
+		"autoRefresh": "التحديث التلقائي",
+		"refreshNow": "تحديث الآن",
+		"lastRefresh": "آخر تحديث",
+		"refreshInterval": "التحديث كل {{seconds}} ثانية"
+	},
+	"popup": {
+		"tripStart": "بداية الرحلة",
+		"latestGPS": "آخر موقع GPS"
+	},
+	"units": {
+		"kmh": "كم/س"
+	}
+}

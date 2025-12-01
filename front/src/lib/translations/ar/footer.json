@@ -1,0 +1,23 @@
+{
+	"copyright": "© {{year}} تتبع الحافلات. جميع الحقوق محفوظة.",
+	"links": {
+		"about": "عن النظام",
+		"contact": "اتصل بنا",
+		"privacy": "سياسة الخصوصية",
+		"terms": "شروط الخدمة",
+		"help": "مركز المساعدة",
+		"documentation": "التوثيق"
+	},
+	"social": {
+		"followUs": "تابعنا",
+		"facebook": "فيسبوك",
+		"twitter": "تويتر",
+		"linkedin": "لينكد إن",
+		"instagram": "إنستغرام"
+	},
+	"contact": {
+		"email": "البريد الإلكتروني",
+		"phone": "الهاتف",
+		"address": "العنوان"
+	}
+}
